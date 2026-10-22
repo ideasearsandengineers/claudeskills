@@ -29,7 +29,7 @@ Each skill lives in its own folder with a `SKILL.md` file that explains what it 
 
 | Skill | What it does |
 |-------|--------------|
-| *skill-name* | *One-line description* |
+| Gift-Finder | A personal AI use case which asks short vivid questions of the Claude User to help them think of creative gift recommendations for specific people with a learning loop |
 | *skill-name* | *One-line description* |
 
 ---
