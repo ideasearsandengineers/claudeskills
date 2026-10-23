@@ -30,7 +30,7 @@ Each skill lives in its own folder with a `SKILL.md` file that explains what it 
 | Skill | What it does |
 |-------|--------------|
 | Gift-Finder | A personal AI use case which asks short vivid questions of the Claude User to help them think of creative gift recommendations for specific people with a learning loop |
-| *skill-name* | *One-line description* |
+| Sales-trascript-coach | Coaches a salesperson on how they handled a sales call, stage by stage, with a quality score, evidence and coaching suggestions, plus a MEDDIC deal check; the methodology is customisable |
 
 ---
 
