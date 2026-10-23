@@ -4,7 +4,7 @@
 
 Most gift advice starts with products. Gift Finder starts with the person. It asks short, vivid questions to uncover the small details someone thought nobody noticed, then turns those details into three genuinely different gift directions, checks each one for budget, timing and risk, and finds real products to buy.
 
-It also learns. Every rejected idea and every gift's reaction is saved to your own private record, so each run gets smarter.
+It also learns. After the occasion, it can remind you to log how the gift landed. Next time you shop for that person, it checks whether they're still enjoying last year's gift, then builds on what worked and steers clear of what didn't. Every rejected idea and every reaction is saved to your own private record, so each run gets smarter.
 
 ---
 
@@ -16,13 +16,14 @@ People spend time and money on gifts that are forgotten, returned or regifted. A
 
 ## How it was built
 
-Gift Finder wasn't written in one go. It was designed, then tested and rebuilt in five rounds, each using a different kind of evidence.
+Gift Finder wasn't written in one go. It was designed, then tested and rebuilt in six rounds, each using a different kind of evidence.
 
 1. **A live run.** The first version was built from a real gift search for a milestone birthday.
 2. **A stranger's test.** The skill was run as a brand-new user would meet it. This found eight flaws, from confusing settings to the big one: it treated a lost keepsake as something to replace, when the real clue was how that keepsake made the person feel about themselves.
 3. **A reverse test.** A real gift that landed (a keyring carrying a treasured photo) was worked backwards to see what the giver noticed. The lesson: the best gifts often do more than one job, and live where the person already goes every day.
 4. **A study of successes.** About 30 published "best gift I ever received" stories were tagged for what made them work, then checked against gift-giving research, including work showing that recipients value lasting use over the "wow" of opening, and that experiences strengthen relationships more than things do.
 5. **A study of misses.** UK surveys on unwanted, returned and regifted presents, plus stories from disappointed recipients, were used to build the skill's "never suggest" filters.
+6. **Closing the loop.** A review found the skill promised to learn from reactions but never actually asked for them. It now checks for unlogged gifts at the start of every run, offers a calendar reminder the day after each occasion, and uses past scores when it's time to choose for the same person again.
 
 Think of it like a sales win/loss review: the wins show the skill where to aim, and the misses show it what to avoid.
 
@@ -31,8 +32,9 @@ Think of it like a sales win/loss review: the wins show the skill where to aim, 
 ## What you need
 
 - **Recommended:** a Google Drive / Google Sheets connection, so the skill keeps a private record between runs.
-- **Without it:** the skill still works and gives you paste-ready notes to save anywhere.
+- **Without it:** the skill still works and gives you paste-ready notes to save anywhere. To keep the learning loop, paste those notes back in at the start of your next run.
 - **Web search,** for finding real products and bookings.
+- **Optional:** a calendar connection, for the "how did it land?" reminder.
 
 Your personal data never lives in the skill. It stays in your own private record.
 

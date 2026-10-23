@@ -3,7 +3,7 @@ name: gift-finder
 description: Find a thoughtful, creative gift for a specific person and occasion (birthday, Christmas, anniversary), keeping a private record of people, past gifts and rejected ideas so every run gets smarter. Use when the user asks for gift or present ideas.
 ---
 
-# Gift Finder (v1.1)
+# Gift Finder (v1.2)
 
 Purpose: help the user give a gift that answers a small, meaningful detail the recipient thought nobody noticed, in about 5 minutes for a new person and 2 minutes for a repeat. The best idea often comes from the user; the skill's job is to spark it.
 
@@ -13,6 +13,8 @@ Created by Greg Cristal. Shared under the MIT Licence.
 - **Recommended:** a Google Drive / Google Sheets connection, so the skill can keep a private memory of people, gifts and rejections between runs.
 - **Without it:** the skill still works. Keep the record in the conversation and, at the end, give the user paste-ready rows to save wherever they like.
 - **Web search**, for finding real products and bookings in Step 5.
+- **Optional:** a calendar connection (or scheduled tasks), so the skill can remind the user to log how a gift landed.
+- **Note:** the feedback loop only works with a saved record. Without Drive, the user needs to keep the paste-ready rows and share them at the start of the next run.
 
 ## Question style (applies to every screen)
 - Ask up to 4 multiple-choice questions per screen, using the app's question tool where available (otherwise as a short numbered list). The user can always give their own answer.
@@ -23,10 +25,17 @@ Created by Greg Cristal. Shared under the MIT Licence.
 1. If Google Drive is connected, search for a sheet named "Gift Finder". If found, connect to it. If not, create it with four tabs:
    - Settings: Setting | Value | Last confirmed
    - People: Name | Relationship | Lives in (for delivery) | Birthday | Birth year | Key dates | Scenes & interests | Stated wishes | Details mined | Avoid | Gift-relevant sensitivities | Last updated
-   - Gifts: Date | Person | Occasion | Gift | Cost | Reaction (their words or second-hand) | Quality 1-5 | Feedback source
+   - Gifts: Date chosen | Person | Occasion | Event date | Gift | Cost | Why it was chosen (the detail or meaning behind it) | First reaction (their words or second-hand) | Quality 1-5 | Feedback source | Still valued? (asked at the next visit) | Reminder set (yes / no)
    - Rejections: Date | Person | Idea | Reason | Note
 2. The record is private by design. Never suggest publishing or sharing it.
-3. If Drive isn't connected, or writing to cells fails, give the user paste-ready rows for each tab instead.
+3. If Drive isn't connected, or writing to cells fails, give the user paste-ready rows for each tab instead. If the user pastes or attaches rows from a previous run, use them as the record.
+
+## Step 0b - Close open loops (every run, before anything new)
+Check Gifts for any gift whose event date has passed but has no first reaction. For each (at most 3, most recent first), ask one quick screen before starting:
+- "How did [gift] for [person] land?" Options, as scenes: they got emotional / they used it straight away / they mentioned it again later / polite thanks, then nothing / it went back or got passed on / I don't know yet.
+- "Who told you?" (I saw it myself / they told me / someone else told me). Second-hand feedback counts, but weighs less.
+- Quality 1-5, suggested from their answer, which the user can change.
+Then feed it back: a hit adds the meaning behind it to that person's "Details mined"; a miss adds the category and reason to "Avoid". If the user says "I don't know yet", leave it open and ask next time. Keep this quick: it should take under a minute.
 
 ## Step 1 - Universal settings (always first)
 Show the saved settings and ask "Still true?" (Yes / Update). On first run, collect them. Settings are about the gift-giver (the user), never the recipient:
@@ -43,6 +52,13 @@ Where a recipient lives is a per-person detail, recorded in People, not a settin
 - Timing: "How long until you'll give them the gift?" (a week or more / under a week / a day or two)
 - Budget band: show amounts in the user's local currency, using the country saved in Settings (or their location if known), with bands rounded to sensible local amounts. If the currency is unclear, ask once and save it.
 Calculate their age from birth year and flag milestone birthdays (e.g. 18, 21, 30, 40, 50, 60, 65, 70, 75, 80+).
+
+**If the person is already in the record**, look up their past gifts before asking anything else, and show them in one line each (gift, occasion, score). Then:
+- **Any past gift not yet asked about a second time:** ask "Are they still using or enjoying [gift]?" (yes, often / now and then / it's been put away / not sure) and record it under "Still valued?". This is the test that matters most: recipients value lasting use more than the moment of opening.
+- **High score (4-5) and still valued:** offer to build on it: "[gift] was a hit. Shall I look for something that builds on the same feeling, or go somewhere new?" Building on it means the same meaning or feeling in a new form (a sequel, a next chapter, a shared experience around it), never a repeat of the same thing.
+- **Low score (1-2) or put away:** say what you'll avoid and why, e.g. "Last time [gift] didn't land because [reason], so I'll steer clear of that." Apply it as a filter for this run.
+- **Middle score (3):** mention it as context, and ask what would have made it better.
+If the person's details are more than a year old, offer a quick refresh of Step 3 rather than asking everything again.
 
 ## Step 3 - Know the person (new person, or refresh if stale)
 Scene-style questions, for example:
@@ -89,7 +105,8 @@ Weigh second-hand feedback ("Dad says she liked it") below the person's own word
 If the user rejects an idea, ask for a reason (too generic / over budget / they'd hate it / logistics / too sensitive / Other). Log it in Rejections, apply it immediately, and offer new directions. Rejection reasons are the most valuable data the skill collects.
 
 ## Step 7 - Close
-- Log the chosen gift in Gifts (cost and occasion now; reaction and quality score later).
+- Log the chosen gift in Gifts: event date, cost, occasion, and why it was chosen (the detail or meaning behind it). Reaction and scores come later, through Step 0b and Step 2.
+- **Offer a feedback reminder** for the day after the event: "Shall I add a reminder to your calendar for [day after the event] to log how it landed?" Only add it if the user says yes, because a calendar is personal. Title it e.g. "How did [person]'s gift land? Open Gift Finder to log it." If no calendar is connected, offer a scheduled task instead, or give a ready-made reminder line the user can paste into their own diary. Record "Reminder set" in Gifts.
 - Update the person's row with new details mined.
 - Offer to draft a short note to go with the gift, saying why the giver chose it, including the story of the hunt if there was one. Words about the person are often what's remembered most.
 - Suggest asking the shop for a gift receipt, so a miss is easy to fix without awkwardness.
@@ -98,6 +115,8 @@ If the user rejects an idea, ask for a reason (too generic / over budget / they'
 ## Version log
 - v1 (Oct 2026): built from a live run for a milestone birthday. Learned: settings first; diverge before converging; scene-style closed questions; detail-mining; feasibility checks; the filters above.
 - v1.1 (Oct 2026): prepared for public release. Added "What you need" and a no-Drive fallback; question style works without a dedicated question tool; generalised examples. First test run fixes: settings clearly about the giver, not the recipient; shopping channel includes online; practical priorities (convenience, price, delivery speed, memberships and discounts) added; recipient location moved to People; quality and brand priority; thank-you and get-well-soon occasions; clearer timing question; budget in local currency; wider Step 3 option pools; dig for the meaning behind a detail, not just the object, and limit literal replacements to one direction. Reverse test (studying a real gift that landed) fixes: multi-select "secretly love"; new questions on loves with no place to live and where in their day they'd see it; "looking at old photos" option; at least one multi-job direction. Story study (about 30 published "best gift ever" stories plus gift-giving research) fixes: questions on passing comments and ruled-out wishes; stated wishes prioritised; experience and care directions allowed; gentle remembrance-gift check; a note with every gift; six-month value check. Misses study (UK unwanted-gift, return and regifting surveys, plus disappointed-recipient stories) fixes: new filters for identity clashes, ignored fears, clothing without known size, generic consumables, unrequested cash; occasion-tone and condition checks; gift receipt.
+
+- v1.2 (Oct 2026): closed the feedback loop, which v1.1 promised but never checked. Step 0b asks about past gifts with no reaction at the start of every run; Step 2 looks up a returning person's history, asks whether past gifts are still valued, and builds on hits or avoids misses; Step 7 offers a calendar reminder for the day after the event; the Gifts record gains event date, why it was chosen, "still valued?" and reminder columns.
 
 ## Ideas for v2
 - Birthday reminders via scheduled tasks.
