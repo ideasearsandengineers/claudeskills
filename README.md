@@ -32,6 +32,7 @@ Each skill lives in its own folder with a `SKILL.md` file that explains what it 
 | Gift-Finder | A personal AI use case which asks short vivid questions of the Claude User to help them think of creative gift recommendations for specific people with a learning loop |
 | Sales-trascript-coach | Coaches a salesperson on how they handled a sales call, stage by stage, with a quality score, evidence and coaching suggestions, plus a MEDDIC deal check; the methodology is customisable |
 | GTM-Program-Designer | Turns a go-to-market priority into a complete, measurable program brief - use when designing, planning, scoping, launching or stress-testing a GTM, sales, enablement, demand generation or pipeline program or initiative |
+| Play-Builder | Turns seller best practice via rough stories into a repeatable sales play - trigger, goal, steps, talk track, discovery questions, objection handling, proof, guardrails and how to measure it |
 
 ---
 
