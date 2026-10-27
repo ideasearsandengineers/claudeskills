@@ -16,6 +16,11 @@ Paste in a sales call transcript and get coached the way a great sales manager w
 - **Simple, checkable maths.** Points out of points available, shown in full, so anyone can verify a score by hand.
 - **Commercial errors come first.** An unauthorised discount or promise can cost more than any missed question, so it's flagged before anything else.
 
+## How it was tested and refined
+
+- **Blind-tested on court transcripts:** run on anonymised Supreme Court oral arguments (public domain, with known outcomes) using a custom "persuasion under questioning" methodology. The scores didn't predict the outcomes, because courts decide on the law rather than performance, which confirmed an important principle: the coach measures the rep's craft, not the deal's fate. The test also exposed gaps that are now fixed: scoring stages that happen many times in one call, transcripts that stop early, buying committees and non-sales contexts.
+- **Checked against the Calgary-Cambridge guide,** the research-based framework used to train doctors in structured consultations. It shares a similar shape and added: getting all concerns on the table at the start, exploring the buyer's ideas, concerns and expectations, picking up cues, explaining in small checked chunks, planning for things going wrong at the close, and the two threads of structure and relationship that run through every call.
+
 ## How it was built
 
 Sales Transcript Coach grew out of the *AdCorn AI Deal Coach*, a portfolio build in which a fictional ad tech company, three CRM opportunities and six realistic call transcripts were used to design and test an AI coaching system. Across three deals at different health levels (stalled, qualify-out risk and progressing), the coach had to tell them apart, not just describe them. In testing, it independently spotted a rep implying a minimum fee was negotiable without sign-off, which is why commercial-error detection is built in.
