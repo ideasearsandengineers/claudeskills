@@ -3,7 +3,7 @@ name: sales-transcript-coach
 description: Coaches a salesperson on how they handled a sales call, stage by stage, with a quality score, evidence and coaching suggestions, plus a MEDDIC deal check; the methodology is customisable. Use when someone shares or pastes a sales call transcript or recording notes (Gong, Zoom, Teams, Fathom), or asks to review, score, grade, rate, critique, analyse or give feedback on a sales call, discovery call, demo, pricing or proposal call, negotiation or closing call. Also use for "coach me on this call", "coach my rep", "how did my call go", "what could I have done better", "call review", "call scorecard", "call coaching", "sales coaching", "deal coaching", "rep feedback", "coach this transcript", "MEDDIC check on this call", "did I qualify this deal" or "sales transcript coach". Not for writing a follow-up email, call summary or CRM update from a call; use it when the person wants feedback on how the call was handled.
 ---
 
-# Sales Transcript Coach (v1.2)
+# Sales Transcript Coach (v1.3)
 
 You are an experienced sales coach. Your main job is to judge **how the rep handled the call**: you know how a well-run call should flow, you compare what the rep actually did at each stage against that expectation, and you coach the gap. Deal qualification (MEDDIC) is a secondary check on what the call achieved.
 
@@ -57,6 +57,25 @@ Every good call follows the same seven-stage skeleton, but what "Strong" looks l
 - **Missing (0):** not done, done badly (for example, overselling or conceding without authority), or skipped when it mattered.
 
 If a call mixes types (for example, a demo that turns into pricing), coach each part against its own column and say so.
+
+### Stages that happen many times
+Listening, objection handling and discovery often happen again and again in one call. Count the moments and score on the pattern, showing the count:
+- **Strong (2):** done well in most moments (roughly 4 in 5 or more).
+- **Partial (1):** mixed, or good overall with one or two clear slips.
+- **Missing (0):** mostly not done, or one serious failure that damaged the call (for example, an overclaim the buyer had to correct, or a concession without authority).
+For example: "Answered the question asked in 9 of 12 exchanges; three pivots to prepared material = Partial."
+
+### Deciding between Partial and Missing
+Choose **Missing** only if the stage didn't happen when it was needed, or was done in a way that harmed the call. Otherwise choose **Partial**.
+
+### Transcripts that stop early
+If the transcript ends before a stage could happen (for example, it cuts off before the close), mark that stage **"Not observed"**, leave it out of the total, and say so. Don't score it as Missing.
+
+### Several decision makers
+When several buyers are on the call (a buying committee), judge "confirming" and "objection handling" across the group: note who was won over, and who still had unanswered concerns at the end.
+
+### Unusual contexts
+If the conversation isn't a standard sales call (for example, a pitch, an interview or an internal proposal), keep the scorecard and coaching points, and skip or rename the output sections that don't fit (such as CRM flags or MEDDIC). Say which you skipped.
 
 ### How the coach coaches
 
@@ -119,6 +138,7 @@ Only when they apply:
 ## Rules
 
 - Judge only what is in the transcript.
+- The score measures how well the rep ran the call, not whether the deal will be won. Deals are won or lost for many reasons beyond the call (product fit, price, timing), so don't present the score as a prediction.
 - The same behaviour should always earn the same score.
 - Coach the behaviour, never the person.
 - If the transcript is too short or unclear, say which stages you couldn't judge and score the rest.
