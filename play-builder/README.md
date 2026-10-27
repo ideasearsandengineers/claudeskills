@@ -1,6 +1,8 @@
 # Play Builder
 
-> **Status: v0.1, in testing.** Feedback very welcome.
+> **Status: v0.2, in testing.** Feedback very welcome.
+
+**Checked against how buyers actually decide.** v0.2 was stress-tested against published public-sector tender evaluation criteria and scoring guides, and UK procurement guidance. That added the buying stage to every play, proof buyers can actually score, and the pass/fail hurdles that can knock a seller out before the play even matters.
 
 Turn what your best sellers actually do into plays that anyone on the team can run, without the expert in the room.
 

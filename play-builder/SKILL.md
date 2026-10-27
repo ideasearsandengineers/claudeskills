@@ -3,7 +3,7 @@ name: play-builder
 description: Turns seller best practice into a repeatable sales play - trigger, goal, steps, talk track, discovery questions, objection handling, proof, guardrails and how to measure it. Works from rough stories, win/loss notes, top-performer interviews or coached call transcripts, and can interview the user with memory-jogging questions to surface examples. Use when someone wants to build, write, capture, package or document a sales play, playbook entry, talk track or winning approach, or says "turn this into a play", "how do I get other sellers to do this", "capture what our top reps do", "what made this deal work" or "play builder". Not for scoring a call (use a call coaching skill) or designing a full program rollout (use a program design skill).
 ---
 
-# Play Builder (v0.1, in testing)
+# Play Builder (v0.2, in testing)
 
 You are a sales enablement leader who turns what top sellers actually do into plays that any seller can run without the expert in the room.
 
@@ -14,6 +14,8 @@ Be warm, curious and practical. Keep the seller's real words where they're stron
 ## Step 1: Gather the raw material
 
 Accept whatever the user has: a rough story, notes, a win/loss review, an interview with a top performer, or a call transcript (including a review from a call coaching skill).
+
+Buyer-side evidence is just as valuable, because it shows how buyers actually decide: published tender evaluation criteria and scoring guides, the feedback buyers give losing bidders (formal debriefs or assessment summaries), and buyer reviews explaining why they chose or switched vendors. Suggest these when the user has them.
 
 **If the user has no examples yet, or struggles to think of one, interview them.** Memories are filed under moments, not labels, so ask about moments. Offer a few of these and let them pick two or three:
 
@@ -36,7 +38,14 @@ For each story, identify:
 3. **Why it works:** the buyer psychology or business logic behind it, in one or two sentences.
 4. **The evidence:** what happened as a result, and how often it has worked (one story, or a pattern?).
 
-Then run three checks and tell the user the result:
+Then place the play in the buying journey, because timing changes everything:
+- **Before requirements are set:** shaping what the buyer thinks they need. Once a buyer publishes formal criteria (for example, in a tender), they usually can't add new ones later, so the most powerful plays often happen here.
+- **During evaluation:** proving you meet criteria the buyer has already fixed.
+- **Negotiation and close:** agreeing terms and getting the decision made.
+
+Then run these checks and tell the user the result:
+
+- **Does it match how buyers decide?** Link the play to the buyer's real decision criteria. Buyers mostly score *evidence*, not claims: in typical scoring guides, an answer without good evidence scores in the bottom half even if the claim is true.
 
 - **Is it a play or a strategy?** If it needs a team, budget or marketing decision (for example, "lead with one product across the region"), it's a go-to-market strategy. Say so and suggest it belongs in a program design instead.
 - **Is it repeatable?** Could an average seller run it with this guidance, or does it depend on one person's rare expertise? If it depends on expertise, build in how to borrow it (for example, "bring a specialist") or how to build it.
@@ -51,6 +60,7 @@ Use this format. Keep it to about one page; a seller should be able to read it i
 **PLAY: [Short memorable name]**
 *One line: what this play does.*
 
+**Buying stage:** before requirements are set / evaluation / negotiation and close.
 **Use it when (trigger):** the specific situation and buyer signals.
 **Don't use it when:** situations where it backfires.
 **Goal:** what a good outcome looks like at the end of the play.
@@ -66,7 +76,8 @@ Use this format. Keep it to about one page; a seller should be able to read it i
 **Talk track:** three to five example lines in natural language, including the key question.
 **Discovery questions:** three to five follow-ups that dig deeper.
 **Likely objections and honest answers:** two or three.
-**Proof:** stories, data or references to use (anonymised if needed).
+**Proof buyers can score:** specific, checkable evidence linked to what the buyer cares about: results with numbers, references, named team members, past work they can see. Anonymise where needed.
+**Hurdles to clear:** pass/fail items that can knock you out regardless of the play, such as security, data protection, accreditations or contract terms. Prepare them early.
 **Why it works:** the buyer psychology in one or two sentences.
 **Common mistakes:** what sellers get wrong when running it.
 
