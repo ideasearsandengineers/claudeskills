@@ -1,6 +1,6 @@
 # GTM Program Designer
 
-> **Status: v0.3, in testing.** Tested blind against two real programs (see "How it was tested"). Feedback very welcome.
+> **Status: v0.4, in testing.** Tested blind against two real programs (see "How it was tested"). Feedback very welcome.
 
 Describe a go-to-market priority, such as "lift trial-to-contract conversion across EMEA" or "standardise our prospecting tools", and get a program brief that the field can run, leadership can inspect and finance can believe.
 
@@ -50,6 +50,8 @@ The skill was tested **blind** against two multi-market sales programs I led in 
 | v0.2 | A sales tooling consolidation program | 10 of 21 | 9 | 2 |
 
 The first test showed that the early version handled *design* well but missed the human side: what the old process was really being used for, governance, markets opting out after launch, calendar freezes, and sponsorship ending before results arrived. The second test showed it now caught most of that, and added recurring yearly processes, capped budgets and measuring the return on each tool. Both programs were different, so the scores aren't a like-for-like comparison, but the direction is clear.
+
+**Checked against public program guidance.** v0.4 was also stress-tested against UK National Audit Office lessons from major programmes, HM Treasury's Green Book (the Five Case Model and optimism bias guidance) and the Magenta Book on evaluation. That added scope and change control, independent checks at key gates, honest status reporting, an explicit allowance for optimistic plans, a theory of change, and a three-question measurement plan.
 
 The blind test also produced things the real programs didn't have, such as a guardrail metric so a program can't "win" by shrinking volume, and default outcomes for undecided escalations.
 
